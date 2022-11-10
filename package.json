@@ -1,0 +1,31 @@
+{
+  "name": "instyle_medica",
+  "version": "1.0.0",
+  "description": "InStyle Medica website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "keyword": [],
+  "author": "Fernando Veizaga, Gabriel Siqueira",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/react": "^2.3.7",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "eslint_d": "^12.2.1",
+    "framer-motion": "^7.6.5",
+    "lsp": "^1.1.1",
+    "next": "^13.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss-language-server": "^0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-next": "^13.0.2",
+    "prettier": "^2.7.1"
+  }
+}
