@@ -32,7 +32,7 @@ const Logo = () => {
                         fontFamily='M PLUS Rounded 1c'
                         fontWeight="bold"
                         ml={3}>
-                        InStyle Medica
+                        InStyle Médica
                     </Text>
                 </LogoBox>
             </a>
