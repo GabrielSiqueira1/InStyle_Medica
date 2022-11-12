@@ -19,7 +19,7 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const  MedicaLogo = `/images/medica-logo.png`
+    const  MedicaLogo = `/images/medica.png`
 
     return (
         <Link legacyBehavior href="/" scroll={false}>
