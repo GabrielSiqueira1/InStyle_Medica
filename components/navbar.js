@@ -40,8 +40,35 @@ const NavBar = props => {
                     </Heading>
                 </Flex>
                 <Stack direction={{base: 'column', md: 'row'}} display={{base: 'none', md: 'flex'}} width={{base: 'full', md:"auto"}} alignItems="center" flexGrow={1} mt={{base:4, md: 0}}>
-                    
+                    <LinkItem href="/photos" path={path}>Fotos</LinkItem>
+                    <LinkItem href="/services" path={path}>Serviços</LinkItem>
+                    <LinkItem href="/news" path={path}>Novidades</LinkItem>
+                    <LinkItem href="/login" path={path}>Login</LinkItem>
                 </Stack>
+            <Box flex = {1} align="right">
+                <Box ml = {2} display={{base: 'inline-block', md: 'none'}}>
+                    <Menu>
+                        <MenuButton as = {IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options"></MenuButton>
+                        <MenuList>
+                            <NextLink href="/" passHref>
+                                <MenuItem as={Link}>Sobre</MenuItem>
+                            </NextLink>
+                            <NextLink href="/photos" passHref>
+                                <MenuItem as={Link}>Fotos</MenuItem>
+                            </NextLink>
+                            <NextLink href="/services" passHref>
+                                <MenuItem as={Link}>Serviços</MenuItem>
+                            </NextLink>
+                            <NextLink href="/news" passHref>
+                                <MenuItem as={Link}>Novidades</MenuItem>
+                            </NextLink>
+                            <NextLink href="/login" passHref>
+                                <MenuItem as={Link}>Login</MenuItem>
+                            </NextLink>
+                        </MenuList>
+                    </Menu>
+                </Box>
+            </Box>
             </Container>
         </Box>
     )
