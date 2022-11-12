@@ -19,10 +19,11 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const  MedicaLogo = `/images/medica-logo.jpg`
+    const  MedicaLogo = `/images/medica-logo.png`
 
     return (
         <Link legacyBehavior href="/" scroll={false}>
+            <div>
             <a>
                 <LogoBox>
                     <Image src = {MedicaLogo} width={20} height={20} alt="logo" />
@@ -35,6 +36,7 @@ const Logo = () => {
                     </Text>
                 </LogoBox>
             </a>
+            </div>
         </Link>
     )
 }
