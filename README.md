@@ -13,7 +13,7 @@ Para a implementação das tarefas de cada um dos participantes do sistema penso
 
 <div align="center">
 	<img src="class_diagram/InStyleMedica.png" />
-<div>
+</div>
 
 ## Página principal
 
@@ -21,6 +21,6 @@ A primeira página irá conectar à todas as outras e ainda contará com um pequ
 
 <div align="center">
 	<img src="readme-images/index.png" />
-<div>
+</div>
 
 </div>
