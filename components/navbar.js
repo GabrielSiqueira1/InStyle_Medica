@@ -17,16 +17,21 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItem = ({href, path, children}) => {
-    const active = path == href
-    const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-    return (
-        <NextLink href={href}>
-            <Link p = {2} bg = {active ? 'glassTeal' : undefined} color={active ? '#202023' : inactiveColor}>
-                {children}
-            </Link>        
-        </NextLink>
-    )
+const LinkItem = ({ href, path, target, children, ...props }) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  return (
+      <Link
+        href={href} passHref scroll={false}
+        p={2}
+        bg={active ? 'grassTeal' : undefined}
+        color={active ? '#202023' : inactiveColor}
+        target={target}
+        {...props}
+      >
+        {children}
+      </Link>
+  )
 }
 
 const NavBar = props => {
@@ -40,37 +45,28 @@ const NavBar = props => {
                         <Logo/>
                     </Heading>
                 </Flex>
+                
                 <Stack direction={{base: 'column', md: 'row'}} display={{base: 'none', md: 'flex'}} width={{base: 'full', md:"auto"}} alignItems="center" flexGrow={1} mt={{base:4, md: 0}}>
                     <LinkItem href="/photos" path={path}>Fotos</LinkItem>
                     <LinkItem href="/services" path={path}>Serviços</LinkItem>
                     <LinkItem href="/news" path={path}>Novidades</LinkItem>
                     <LinkItem href="/login" path={path}>Login</LinkItem>
                 </Stack>
-            <Box flex = {1} align="right">
-                <ThemeToggleButton />
-                <Box ml = {2} display={{base: 'inline-block', md: 'none'}}>
-                    <Menu>
-                        <MenuButton as = {IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options"></MenuButton>
-                        <MenuList>
-                            <NextLink href="/" passHref>
-                                <MenuItem as={Link}>Sobre</MenuItem>
-                            </NextLink>
-                            <NextLink href="/photos" passHref>
-                                <MenuItem as={Link}>Fotos</MenuItem>
-                            </NextLink>
-                            <NextLink href="/services" passHref>
-                                <MenuItem as={Link}>Serviços</MenuItem>
-                            </NextLink>
-                            <NextLink href="/news" passHref>
-                                <MenuItem as={Link}>Novidades</MenuItem>
-                            </NextLink>
-                            <NextLink href="/login" passHref>
-                                <MenuItem as={Link}>Login</MenuItem>
-                            </NextLink>
-                        </MenuList>
-                    </Menu>
+                <Box flex = {1} align="right">
+                    <ThemeToggleButton />
+                    <Box ml = {2} display={{base: 'inline-block', md: 'none'}}>
+                        <Menu>
+                            <MenuButton as = {IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options"></MenuButton>
+                            <MenuList>
+                                <MenuItem href="/" passHref as={Link}>Sobre</MenuItem>
+                                <MenuItem href="/photos" passHref as={Link}>Fotos</MenuItem>
+                                <MenuItem href="/services" passHref as={Link}>Serviços</MenuItem>
+                                <MenuItem href="/news" passHref as={Link}>Novidades</MenuItem>
+                                <MenuItem href="/login" passHref as={Link}>Login</MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </Box>
                 </Box>
-            </Box>
             </Container>
         </Box>
     )
