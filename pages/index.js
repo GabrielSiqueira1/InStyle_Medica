@@ -36,7 +36,7 @@ const Page = () => {
               <Heading as = "h3" variant='section-title'>
                 Sobre
               </Heading>
-                <Paragraph>A InStyle Médica é uma empresa cooperativista na área de saúde e pesquias tecnológica no Brasil. Tem umas das maiores redes de assitência médica do Brasil.
+                <Paragraph>A InStyle Médica é uma empresa cooperativista na área de saúde e pesquisa tecnológica no Brasil. Tem umas das maiores redes de assitência médica do Brasil.
                 A empresa nasceu em 2009 com o objetivo de projetar uma vacina para o pândemia de H1N1 que assolou o povo brasileiro, e hoje existem 100 cooperativas médicas, que prestam 
                 assitência para mais de 3 milhões de clientes e para 10 mil empresas em todo país.
                 </Paragraph>
