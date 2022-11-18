@@ -7,20 +7,25 @@ import { AboutSection, AboutYear } from "../components/about"
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+  shouldForwardProp: prop => ['width', 'height', 'src', 'alt', 'max-width', 'max-height'].includes(prop)
 })
 
 const Page = () => {
   return (<Container>
-            <Box>
-                <ProfileImage
-                  src="/images/contents/home-page.jpg"
-                  alt="Profile image"
-                  borderRadius="15%"
-                  width="900"
-                  height="275"
-                  padding={5}
-                />
+            <Box      
+              w="500px"
+              h="300px"
+              display="inline-block"
+              overflow="hidden"       
+            >
+              <ProfileImage
+                src="/images/contents/home-page.jpg"
+                alt="Profile image"
+                borderRadius="20%"
+                width="900"
+                height="300"
+                padding={5}
+              />
             </Box>
             <Box borderRadius="lg" bg="grey" p={3} mb={6} align="center">
               InStyle Médica, sua saúde é o nosso objetivo.

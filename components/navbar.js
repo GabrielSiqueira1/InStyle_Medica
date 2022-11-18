@@ -3,7 +3,6 @@ import NextLink from 'next/link'
 import {
     Container,
     Box,
-    Link,
     Stack,
     Heading,
     Flex,
@@ -18,21 +17,22 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-  return (
-      <Link
-        href={href} passHref scroll={false}
-        p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
-        target={target}
-        {...props}
-      >
-        {children}
-      </Link>
-  )
-}
+    const active = path === href
+    const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+    return (
+      <NextLink href={href} passHref scroll={false}>
+        <Box
+          p={2}
+          bg={active ? 'grassTeal' : undefined}
+          color={active ? '#202023' : inactiveColor}
+          target={target}
+          {...props}
+        >
+          {children}
+        </Box>
+      </NextLink>
+    )
+  }
 
 const NavBar = props => {
     const { path } =  props
@@ -58,11 +58,11 @@ const NavBar = props => {
                         <Menu>
                             <MenuButton as = {IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options"></MenuButton>
                             <MenuList>
-                                <MenuItem href="/" passHref as={Link}>Sobre</MenuItem>
-                                <MenuItem href="/photos" passHref as={Link}>Fotos</MenuItem>
-                                <MenuItem href="/services" passHref as={Link}>Serviços</MenuItem>
-                                <MenuItem href="/news" passHref as={Link}>Novidades</MenuItem>
-                                <MenuItem href="/login" passHref as={Link}>Login</MenuItem>
+                                <MenuItem href="/" passHref as={LinkItem}>Sobre</MenuItem>
+                                <MenuItem href="/photos" passHref as={LinkItem}>Fotos</MenuItem>
+                                <MenuItem href="/services" passHref as={LinkItem}>Serviços</MenuItem>
+                                <MenuItem href="/news" passHref as={LinkItem}>Novidades</MenuItem>
+                                <MenuItem href="/login" passHref as={LinkItem}>Login</MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>
