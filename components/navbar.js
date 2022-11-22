@@ -48,8 +48,8 @@ const NavBar = props => {
                 
                 <Stack direction={{base: 'column', md: 'row'}} display={{base: 'none', md: 'flex'}} width={{base: 'full', md:"auto"}} alignItems="center" flexGrow={1} mt={{base:4, md: 0}}>
                     <LinkItem href="/photos" path={path}>Fotos</LinkItem>
-                    <LinkItem href="/services" path={path}>Serviços</LinkItem>
-                    <LinkItem href="/news" path={path}>Novidades</LinkItem>
+                    <LinkItem href="/address" path={path}>Novo endereço</LinkItem>
+                    <LinkItem href="/scheduling" path={path}>Agendamento</LinkItem>
                     <LinkItem href="/login" path={path}>Login</LinkItem>
                 </Stack>
                 <Box flex = {1} align="right">
@@ -60,8 +60,8 @@ const NavBar = props => {
                             <MenuList>
                                 <MenuItem href="/" passHref as={LinkItem}>Sobre</MenuItem>
                                 <MenuItem href="/photos" passHref as={LinkItem}>Fotos</MenuItem>
-                                <MenuItem href="/services" passHref as={LinkItem}>Serviços</MenuItem>
-                                <MenuItem href="/news" passHref as={LinkItem}>Novidades</MenuItem>
+                                <MenuItem href="/address" passHref as={LinkItem}>Novo endereço</MenuItem>
+                                <MenuItem href="/scheduling" passHref as={LinkItem}>Agendamento</MenuItem>
                                 <MenuItem href="/login" passHref as={LinkItem}>Login</MenuItem>
                             </MenuList>
                         </Menu>

@@ -1,10 +1,12 @@
-import { Container, Box, Heading, Link, Button, chakra } from "@chakra-ui/react"
+import { Container, Box, Heading, Link, Button, chakra, SimpleGrid } from "@chakra-ui/react"
 import Section from '../components/section'
 import Paragraph from "../components/paragraph"
 import NextLink from "next/link"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { AboutSection, AboutYear } from "../components/about"
 import Image from 'next/image'
+import { PhotosGridItem } from "../components/grid-item";
+import thumbHomePage from '../public/images/contents/home-page.jpg'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt', 'max-width', 'max-height'].includes(prop)
@@ -12,21 +14,12 @@ const ProfileImage = chakra(Image, {
 
 const Page = () => {
   return (<Container>
-            <Box      
-              w="500px"
-              h="300px"
-              display="inline-block"
-              overflow="hidden"       
-            >
-              <ProfileImage
-                src="/images/contents/home-page.jpg"
-                alt="Profile image"
-                borderRadius="20%"
-                width="900"
-                height="300"
-                padding={5}
-              />
-            </Box>
+            <SimpleGrid columns={[1,1,1]} gap={6}>
+                <Section>
+                    <PhotosGridItem id="" title="" thumbnail={thumbHomePage}>
+                    </PhotosGridItem>
+                </Section>
+              </SimpleGrid>
             <Box borderRadius="lg" bg="grey" p={3} mb={6} align="center">
               InStyle Médica, sua saúde é o nosso objetivo.
             </Box>
@@ -46,16 +39,30 @@ const Page = () => {
                 assitência para mais de 3 milhões de clientes e para 10 mil empresas em todo país.
                 </Paragraph>
                 <Paragraph>Referência em tratamento viral, a rede colaborativa da empresa conta com mais de 80 mil profissionais, com 1024 hospitais credenciados, além de proto-atendimentos, laboratórios, ambulâncias e uma faculdade.
-                  Veja os <NextLink href = "/services" /><Link>serviços</Link> oferecidos.
+                  Agende uma <NextLink href = "/scheduling" /><Link>consulta</Link>.
                 </Paragraph>
                 <Box align="center" my={4} p={4}>
-                  <NextLink href="/services" />
+                  <NextLink href="/scheduling" />
                   <Button rightIcon = {<ChevronRightIcon />} colorScheme="teal" p={8}>
-                    Especialidades  
+                    Agendamento 
                   </Button>
                 </Box>
             </Section>
-            <Section delay = {0.2}>
+            <Section delay={0.2}>
+              <Heading as = "h3" variant='section-title'>
+                Missão
+              </Heading>
+                <Paragraph>Servir um atendimento médico seguro, eficiênte e rápido, num ambiente limpo e agradável.
+                </Paragraph>
+            </Section>
+            <Section delay={0.3}>
+              <Heading as = "h3" variant='section-title'>
+                Valores
+              </Heading>
+                <Paragraph>Buscamos a satisfação do cliente, portanto, acreditamos ser valoroso o respeito às pessoas. 
+                </Paragraph>
+            </Section>
+            <Section delay = {0.4}>
               <Heading as = "h3" variant="section-title">
                 Histórico e realizações
               </Heading>
