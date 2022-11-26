@@ -23,4 +23,20 @@ A primeira página irá conectar à todas as outras e ainda contará com um pequ
 	<img src="readme-images/index.png" />
 </div>
 
+## Página de fotos
+
+A segunda página contém algumas imagens relacionadas a empresa como equipamentos, recepção e procedimento de pesquisa.
+
+<div align="center">
+	<img src="readme-images/photos.png" />
+</div>
+
+## Página de endereços
+
+Página auxiliar para a composição do banco de dados
+
+<div align="center">
+	<img src="readme-images/address.png" />
+</div>
+
 </div>
