@@ -49,7 +49,7 @@ const NavBar = props => {
                 <Stack direction={{base: 'column', md: 'row'}} display={{base: 'none', md: 'flex'}} width={{base: 'full', md:"auto"}} alignItems="center" flexGrow={1} mt={{base:4, md: 0}}>
                     <LinkItem href="/photos" path={path}>Fotos</LinkItem>
                     <LinkItem href="/address" path={path}>Novo endereço</LinkItem>
-                    <LinkItem href="/scheduling" path={path}>Agendamento</LinkItem>
+                    <LinkItem href="http://localhost:3001" path={path}>Agendamento</LinkItem>
                     <LinkItem href="/login" path={path}>Login</LinkItem>
                 </Stack>
                 <Box flex = {1} align="right">
