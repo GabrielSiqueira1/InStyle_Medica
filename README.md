@@ -42,9 +42,7 @@ Página auxiliar para a composição do banco de dados.
 ## Página de agendamento
 
 Em construção. Página que utilizará duas manipulações de banco de dados, uma para preenchimento de agenda como a página de endereços e outra para o preenchimento dinâmico do select para obtenção dos médicos de cada especialidade. Em relação ao horário, para facilitar a marcação de exames considerou-se que horas, data, médico e paciente sejam a chave primária.
+Ainda na página de agendamento, será utilizado o express.js para conexão com banco de dados para dinamização dos selects.
 
-<div align="center">
-	<img src="readme-images/scheduling.png" />
-</div>
 
 </div>
