@@ -8,30 +8,65 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <title>Country State City Dependent Dropdown in Node js</title>
+        <title>Agendamentos</title>
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center text-primary mt-3 mb-3">Dynamic Dropdown Select Box in Node.js</h1>
+            <h1 class="text-center text-primary mt-3 mb-3"><%= title %></h1>
+
+            <% if(action == 'add') { %>
+
+            <div class = "card">
+                <div class = "card-header">Formulário</div>
+                <div class="card-body">
+                    <form method="POST" action="/add_data">
+                        <div class="mb-3">
+                            <select name="especialidade" id="especialidade" class="form-control">
+                            <option value="">Selecione a especialidade</option>
+
+                            <% for(var count = 0; count < especialidade_data.length; count++){%>
+                                <option value="<% especialidade_data[count].especialidade %>"><%= especialidade_data[count].especialidade%></option>
+                            <% } %>
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+
+                        </div>
+                        <div class="mb-3">
+
+                        </div>
+                        <div class="mb-3">
+                            <select name="horario" id="horario" class="form-control">
+                                <option value="">Selecione o horario</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type = "submit" name = "submit_button" class = "btn btn-primary" value = "Add" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <% } else { %>
 
             <div class="card">
-                <div class="card-header">Dynamic Dropdown</div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <select name="especialidade" id="especialidade" class="form-control">
-                          <option value="">Selecione a especialidade</option>
-
-                          <% for(var count = 0; count < especialidade_data.length; count++){%>
-                            <option value="<% especialidade_data[count].especialidade %>"><%= especialidade_data[count].especialidade%></option>
-                          <% } %>
-
-                        </select>
-                    </div>
-                    <div class="mb-3">
-
-                    </div>
-                    <div class="mb-3">
-
+                <div class="card-header">
+                    <div class = "row">
+                        <div class="col">Agendamentos</div>
+                        <div class="col">
+                            <a href="/add" class="btn btn-success btn-sm float-end">Add</a>
+                        </div>
                     </div>
                 </div>
             </div>
