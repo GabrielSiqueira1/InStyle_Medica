@@ -12,31 +12,35 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center text-primary mt-3 mb-3"><%= title %></h1>
-
-            <% if(action == 'add') { %>
+            <h1 class="text-center text-primary mt-3 mb-3">Agendamento</h1>
 
             <div class = "card">
                 <div class = "card-header">Formulário</div>
                 <div class="card-body">
-                    <form method="POST" action="/add_data">
+                    <form method="POST" action="/add">
                         <div class="mb-3">
+                            <label for="especialidade">Especialidade </label>
                             <select name="especialidade" id="especialidade" class="form-control">
-                            <option value="">Selecione a especialidade</option>
-
-                            <% for(var count = 0; count < especialidade_data.length; count++){%>
+                                <option value="">Selecione a especialidade</option>
+                                <% for(var count = 0; count < especialidade_data.length; count++){%>
                                 <option value="<% especialidade_data[count].especialidade %>"><%= especialidade_data[count].especialidade%></option>
-                            <% } %>
-
+                                <% } %>
                             </select>
                         </div>
                         <div class="mb-3">
-
+                            <label for="medico">Médico </label>
+                            <select name="medico" id="medico" class="form-control">
+                                <option value="">Selecione o médico</option>
+                                <option value="1">Carlos Alberto</option>
+                                <option value="2">Jorge Antunes</option>
+                            </select>
                         </div>
                         <div class="mb-3">
-
+                            <label for="exame">Data do exame </label>
+                            <input type="date" id="exame" name="exame" class="form-control">
                         </div>
                         <div class="mb-3">
+                            <label for="horario">Horário </label>
                             <select name="horario" id="horario" class="form-control">
                                 <option value="">Selecione o horario</option>
                                 <option value="8">8</option>
@@ -52,22 +56,21 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <input type = "submit" name = "submit_button" class = "btn btn-primary" value = "Add" />
+                            <label for="nome">Nome </label>
+                            <input type="text" id="nome" name="nome" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone">Telefone </label>
+                            <input type="text" id="telefone" name="telefone" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">E-mail </label>
+                            <input type="text" id="email" name="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input type = "submit" name = "submit_button" class = "btn btn-primary" value = "Agendar" />
                         </div>
                     </form>
-                </div>
-            </div>
-
-            <% } else { %>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class = "row">
-                        <div class="col">Agendamentos</div>
-                        <div class="col">
-                            <a href="/add" class="btn btn-success btn-sm float-end">Add</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
