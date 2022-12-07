@@ -17,6 +17,30 @@ router.get("/", function(request, response, next){
   response.render('index', {title: 'Inserindo na agenda do MySQL', action:'add'});
 });
 
+router.get('/get_data', function(request, response, next){
+  var type = request.query.type;
+  var search_query = request.query.parent_value;
+
+  if(type == 'load_state'){
+    var query = `
+    SELECT DISTINCT nome AS Data FROM medicos
+    WHERE especialidade = '${search_query}'
+    ORDER BY nome ASC
+    `;
+  }
+
+  database.query(query, function(error, data){
+    var data_arr = [];
+    data.forEach(function(row){
+      data_arr.push(row.Data);
+    });
+
+    response.json(data_arr);
+
+  });
+
+});
+
 router.post("/add", function(request, response, next){
   var especialidade = request.body.especialidade;
   var medico = request.body.medico;

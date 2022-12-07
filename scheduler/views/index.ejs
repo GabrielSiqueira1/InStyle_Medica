@@ -23,7 +23,7 @@
                             <select name="especialidade" id="especialidade" class="form-control">
                                 <option value="">Selecione a especialidade</option>
                                 <% for(var count = 0; count < especialidade_data.length; count++){%>
-                                <option value="<% especialidade_data[count].especialidade %>"><%= especialidade_data[count].especialidade%></option>
+                                <option value="<%= especialidade_data[count].especialidade %>"><%= especialidade_data[count].especialidade%></option>
                                 <% } %>
                             </select>
                         </div>
@@ -31,8 +31,6 @@
                             <label for="medico">Médico </label>
                             <select name="medico" id="medico" class="form-control">
                                 <option value="">Selecione o médico</option>
-                                <option value="1">Carlos Alberto</option>
-                                <option value="2">Jorge Antunes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -76,3 +74,32 @@
         </div>
     </body>
 </html>
+
+<script>
+
+function _(element){
+    return document.getElementById(element);
+}
+
+function fetch_data(parent_element, child_element, type){
+    fetch('/get_data?type='+type+'&parent_value='+parent_element.value+'').then(function(response){
+        return response.json();
+    }).then(function(responseData){
+        var html = '';
+
+        if(type == 'load_state'){
+            html = '<option value="">Selecione o médico</option>'
+        }
+        for(var count = 0; count < responseData.length; count++){
+            html += '<option value="'+responseData[count]+'">'+responseData[count]+'</option>';
+        }
+
+        child_element.innerHTML = html;
+    });
+}
+
+_('especialidade').onchange = function(){
+    fetch_data(_('especialidade'), _('medico'), 'load_state');
+};
+
+</script>
