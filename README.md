@@ -7,6 +7,8 @@ Integrantes do grupo:
 - Fernando Garamvolgyi Mafra Veizaga - 20203001902
 - Gabriel Siqueira Silva - 20203008814
 
+# Visualização do usuário
+
 ## Diagrama de classe
 
 Para a implementação das tarefas de cada um dos participantes do sistema pensou-se no seguinte diagrama de classe.
@@ -54,5 +56,9 @@ Página de conexão para o CRUD (Create, Read, Update, Delete).
 <div align="center">
 	<img src="readme-images/login.png" />
 </div>
+
+# Visualização do administrador
+
+## CRUD
 
 </div>
