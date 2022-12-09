@@ -50,7 +50,7 @@ const NavBar = props => {
                     <LinkItem href="/photos" path={path}>Fotos</LinkItem>
                     <LinkItem href="/address" path={path}>Novo endereço</LinkItem>
                     <LinkItem href="http://localhost:3001" path={path}>Agendamento</LinkItem>
-                    <LinkItem href="/login" path={path}>Login</LinkItem>
+                    <LinkItem href="http://localhost:3002" path={path}>Login</LinkItem>
                 </Stack>
                 <Box flex = {1} align="right">
                     <ThemeToggleButton />

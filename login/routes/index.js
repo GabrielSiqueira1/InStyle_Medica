@@ -18,13 +18,14 @@ router.post('/login', function(request, response, next){
     WHERE user_email = "${user_email_address}"
     `;
 
+    console.log("{$query}");
+
     database.query(query, function(error, data){
       if(data.length > 0){
         for (var count = 0; count < data.length; count++){
           if(data[count].user_password == user_password){
-            request.session.user_id = data[count].user_id;
-
-            response.redirect("localhost:3003");
+            request.session.user_id = data[count].user_id;  
+            response.redirect("http://localhost:3000");
           }else{
             response.send('Senha incorreta');
           }

@@ -6,7 +6,7 @@ var database = require('../database');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  database.query('SELECT DISTINCT especialidade FROM medicos ORDER BY especialidade ASC', 
+  database.query('SELECT DISTINCT especialidade FROM funcionarios ORDER BY especialidade ASC', 
   function(error, data){
     res.render('index', { title: 'Express' , especialidade_data : data});
   });
@@ -23,7 +23,7 @@ router.get('/get_data', function(request, response, next){
 
   if(type == 'load_state'){
     var query = `
-    SELECT DISTINCT nome AS Data FROM medicos
+    SELECT DISTINCT nome AS Data FROM funcionarios
     WHERE especialidade = '${search_query}'
     ORDER BY nome ASC
     `;
@@ -51,7 +51,7 @@ router.post("/add", function(request, response, next){
   var email = request.body.email;
 
   var query = `
-    INSERT INTO agenda (especialidade, medico, data, horario, paciente, telefone, email) VALUES 
+    INSERT INTO agendamento (especialidade, medico, data, horario, paciente, telefone, email) VALUES 
     ("${especialidade}", "${medico}", "${data}", "${horario}", "${nome}", "${telefone}", "${email}")
   `;
 
@@ -59,7 +59,7 @@ router.post("/add", function(request, response, next){
     if(error){
       throw error;
     }else{
-      response.redirect("localhost:3000");
+      response.redirect("http://localhost:3000");
     }
   });
 
