@@ -61,4 +61,6 @@ Página de conexão para o CRUD (Create, Read, Update, Delete).
 
 ## CRUD
 
+Para este projeto, além do React e do Node.js, foram utilizadas as bibliotecas Axios, Nodemon e React-router-dom.
+
 </div>
