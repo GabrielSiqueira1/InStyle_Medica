@@ -197,6 +197,6 @@ app.delete("/api/deleteendereco/:id", (req, res) => {
     })
 });
 
-app.listen(3001, () => {
-    console.log('running on port 3001');
+app.listen(3005, () => {
+    console.log('running on port 3005');
 })
