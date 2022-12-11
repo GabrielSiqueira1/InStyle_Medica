@@ -6,7 +6,7 @@ var database = require('../database');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  database.query('SELECT DISTINCT especialidade FROM funcionarios ORDER BY especialidade ASC', 
+  database.query('SELECT DISTINCT especialidade FROM medico ORDER BY especialidade ASC', 
   function(error, data){
     res.render('index', { title: 'Express' , especialidade_data : data});
   });

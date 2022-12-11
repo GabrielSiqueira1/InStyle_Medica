@@ -5,13 +5,13 @@ export default function ListPacientes () {
 
     const [funcList, setFuncList] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/api/getpacientes').then((response) => {
+        axios.get('http://localhost:3004/api/getpacientes').then((response) => {
             setFuncList(response.data);
         })
     }, [])
 
     const deleteFunc = (nome) => {
-        axios.delete(`http://localhost:3001/api/deletepaciente/${nome}`).then((response) => {
+        axios.delete(`http://localhost:3004/api/deletepaciente/${nome}`).then((response) => {
             setFuncList(response.data);
         })
         window.location.reload(false);
@@ -19,7 +19,7 @@ export default function ListPacientes () {
 
     return(
         <div>
-            <h1>Listar Médicos</h1>
+            <h1>Listar Pacientes</h1>
             <table align="center">
                 <thead>
                     <tr>

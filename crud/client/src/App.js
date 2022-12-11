@@ -10,6 +10,7 @@ import ListFuncionarios from './components/ListFuncionarios';
 import CreatePaciente from './components/CreatePaciente';
 import ListAgendamentos from './components/ListAgendamentos';
 import ListEnderecos from './components/ListEnderecos';
+import ListPacientes from './components/ListPacientes';
 
 function App() {
   return (
@@ -40,7 +41,7 @@ function App() {
           <Route path="/create_user/create_paciente" element={<CreatePaciente />} />
           <Route path="/list_user/list_medicos" element={<ListMedicos />} />
           <Route path="/list_user/list_func" element={<ListFuncionarios />} />
-          <Route path="/list_user/list_pacientes" element={<ListFuncionarios />} />
+          <Route path="/list_user/list_pacientes" element={<ListPacientes />} />
           <Route path="/list_user/list_agendamentos" element={<ListAgendamentos />} />
           <Route path="/list_user/list_enderecos" element={<ListEnderecos />} />
         </Routes>

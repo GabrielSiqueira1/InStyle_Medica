@@ -19,7 +19,7 @@ export default function CreateMedico () {
     const [crm, setCrm] = useState('');
 
     const submitMedico = () => {
-        axios.post('http://localhost:3001/api/insertmedico', {
+        axios.post('http://localhost:3004/api/insertmedico', {
             nome: nome,
             email: email,
             telefone: telefone,

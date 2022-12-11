@@ -5,13 +5,13 @@ export default function ListFuncionarios () {
 
     const [funcList, setFuncList] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/api/getfuncionarios').then((response) => {
+        axios.get('http://localhost:3004/api/getfuncionarios').then((response) => {
             setFuncList(response.data);
         })
     }, [])
 
     const deleteFunc = (nome) => {
-        axios.delete(`http://localhost:3001/api/deletefunc/${nome}`).then((response) => {
+        axios.delete(`http://localhost:3004/api/deletefunc/${nome}`).then((response) => {
             setFuncList(response.data);
         })
         window.location.reload(false);

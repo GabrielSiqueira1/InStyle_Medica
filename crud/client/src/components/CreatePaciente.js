@@ -17,7 +17,7 @@ export default function CreatePaciente () {
     const [tipo_sanguineo, setTipo] = useState('');
 
     const submitFuncionario = () => {
-        axios.post('http://localhost:3001/api/insertpaciente', {
+        axios.post('http://localhost:3004/api/insertpaciente', {
             nome: nome,
             email: email,
             telefone: telefone,

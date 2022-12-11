@@ -5,13 +5,13 @@ export default function ListMedicos () {
 
     const [funcList, setFuncList] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/api/getmedicos').then((response) => {
+        axios.get('http://localhost:3004/api/getmedicos').then((response) => {
             setFuncList(response.data);
         })
     }, [])
 
     const deleteFunc = (nome) => {
-        axios.delete(`http://localhost:3001/api/deletemedico/${nome}`).then((response) => {
+        axios.delete(`http://localhost:3004/api/deletemedico/${nome}`).then((response) => {
             setFuncList(response.data);
         })
         window.location.reload(false);

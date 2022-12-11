@@ -5,13 +5,13 @@ export default function ListEnderecos () {
 
     const [funcList, setFuncList] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/api/getenderecos').then((response) => {
+        axios.get('http://localhost:3004/api/getenderecos').then((response) => {
             setFuncList(response.data);
         })
     }, [])
 
     const deleteFunc = (id) => {
-        axios.delete(`http://localhost:3001/api/deleteendereco/${id}`).then((response) => {
+        axios.delete(`http://localhost:3004/api/deleteendereco/${id}`).then((response) => {
             setFuncList(response.data);
         })
         window.location.reload(false);

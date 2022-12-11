@@ -5,13 +5,13 @@ export default function ListAgendamentos () {
 
     const [funcList, setFuncList] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/api/getagendamentos').then((response) => {
+        axios.get('http://localhost:3004/api/getagendamentos').then((response) => {
             setFuncList(response.data);
         })
     }, [])
 
     const deleteFunc = (id) => {
-        axios.delete(`http://localhost:3001/api/deleteagendamento/${id}`).then((response) => {
+        axios.delete(`http://localhost:3004/api/deleteagendamento/${id}`).then((response) => {
             setFuncList(response.data);
         })
         window.location.reload(false);

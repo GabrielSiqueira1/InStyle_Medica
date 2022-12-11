@@ -17,7 +17,7 @@ export default function CreateFuncionario () {
     const [senha, setSenha] = useState('');
 
     const submitFuncionario = () => {
-        axios.post('http://localhost:3001/api/insertfunc', {
+        axios.post('http://localhost:3004/api/insertfunc', {
             nome: nome,
             email: email,
             telefone: telefone,
