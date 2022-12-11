@@ -23,7 +23,7 @@ router.get('/get_data', function(request, response, next){
 
   if(type == 'load_state'){
     var query = `
-    SELECT DISTINCT nome AS Data FROM funcionarios
+    SELECT DISTINCT nome AS Data FROM medico
     WHERE especialidade = '${search_query}'
     ORDER BY nome ASC
     `;
@@ -60,6 +60,7 @@ router.post("/add", function(request, response, next){
       throw error;
     }else{
       response.redirect("http://localhost:3000");
+      alert("Agendado!");
     }
   });
 

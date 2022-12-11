@@ -8,7 +8,7 @@ const db = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'CRUDDB',
+    database: 'instyle',
 });
 
 app.use(cors());
