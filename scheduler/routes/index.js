@@ -60,7 +60,6 @@ router.post("/add", function(request, response, next){
       throw error;
     }else{
       response.redirect("http://localhost:3000");
-      alert("Agendado!");
     }
   });
 
