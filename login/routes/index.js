@@ -26,7 +26,6 @@ router.post('/login', function(request, response, next){
           if(data[count].senha == user_password){ 
             request.session.id = data[count].id; 
             response.redirect("http://localhost:3003");
-            alert("Olá!");
           }else{
             response.send('Senha incorreta');
           }
