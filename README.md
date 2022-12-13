@@ -63,4 +63,8 @@ Página de conexão para o CRUD (Create, Read, Update, Delete).
 
 Para esta parte do projeto, além do React e do Node.js, foram utilizadas as bibliotecas Axios, Nodemon e React-router-dom.
 
+##Página inicial da área restrita:
+
+![image](https://user-images.githubusercontent.com/110564584/207469662-669d45e9-3298-4c73-9cf8-85a5e23228fd.png)
+
 </div>
