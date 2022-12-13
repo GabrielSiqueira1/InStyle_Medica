@@ -63,8 +63,24 @@ Página de conexão para o CRUD (Create, Read, Update, Delete).
 
 Para esta parte do projeto, além do React e do Node.js, foram utilizadas as bibliotecas Axios, Nodemon e React-router-dom.
 
-##Página inicial da área restrita:
+## Página inicial da área restrita:
 
 ![image](https://user-images.githubusercontent.com/110564584/207469662-669d45e9-3298-4c73-9cf8-85a5e23228fd.png)
+	
+## Opções de cadastro de funcionário:
+	
+![image](https://user-images.githubusercontent.com/110564584/207470746-c1c4f629-5f37-42ab-bec9-cd0b4fadb62f.png)
+
+## Exemplo de preenchimento de cadastro de médico:
+
+![image](https://user-images.githubusercontent.com/110564584/207470552-7a2aeb88-c3eb-44ad-b01b-2951ed020826.png)
+	
+## Opções de listagem de dados das tabelas:
+	
+![image](https://user-images.githubusercontent.com/110564584/207469883-724e5839-5fdf-45e5-9075-7d6bc19d8450.png)
+
+## Exemplo de listagem (listagem de médicos):
+	
+![image](https://user-images.githubusercontent.com/110564584/207470704-0c64c304-b216-47e4-b6ee-7bfb43a6768e.png)
 
 </div>
