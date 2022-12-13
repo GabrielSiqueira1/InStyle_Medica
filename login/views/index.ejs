@@ -14,22 +14,34 @@
     <body>
 
         <div class="container">
-            <h1 class="mt-5 mb-5 text-center text-primary"><b>Entre com sua conta</b></h1>
 
             <div class="row mt-5">
                 <div class="col-md-3">&nbsp;</div>
                 <div class="col-md-6">
+                <% if(session.user_id) { %>
+
+                    <h1>Olá, seja bem-vindo(a) <%= session.user_nome %></h1>
+
+                    <h4>Nesse ambiente você pode olhar seus agendamentos!</h4>
+
+                    <a href="/agendamentos" class="btn btn-primary">Meus Agendamentos</a>
+
+                    <a href="/logout" class="btn btn-primary">Logout</a>
+
+                <% } else { %>
+
+                    <h1 class="mt-5 mb-5 text-center text-primary"><b>Login</b></h1>
 
                     <div class="card">
                         <div class="card-header">Login</div>
                         <div class="card-body">
                             <form method="post" action="/login">
                                 <div class="mb-3">
-                                    <label>Login</label>
+                                    <label>Email Address</label>
                                     <input type="email" name="user_email_address" class="form-control" />
                                 </div>
                                 <div class="mb-3">
-                                    <label>Senha</label>
+                                    <label>Password</label>
                                     <input type="password" name="user_password" class="form-control" />
                                 </div>
                                 <div class="mb-3">
@@ -39,6 +51,7 @@
                         </div>
                     </div>
 
+                <% } %>
                 </div>
             </div>
         </div>

@@ -59,6 +59,7 @@ router.post("/add", function(request, response, next){
     if(error){
       throw error;
     }else{
+      alert("Inserido!");
       response.redirect("http://localhost:3000");
     }
   });
