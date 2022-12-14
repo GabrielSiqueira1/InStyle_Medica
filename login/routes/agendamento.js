@@ -7,7 +7,7 @@ var database = require('../database');
 
 router.get("/", function(request, response, next){
 
-	var query = `SELECT * FROM agendamento WHERE medico = "Teste"`;
+	var query = `SELECT * FROM agendamento WHERE medico = "Luciana Soares Monteiro"`;
 
 	database.query(query, function(error, data){
 
