@@ -7,6 +7,14 @@ Integrantes do grupo:
 - Fernando Garamvolgyi Mafra Veizaga - 20203001902
 - Gabriel Siqueira Silva - 20203008814
 
+Para rodar o projeto basta:
+
+npm run dev na pasta raiz
+npm start na pasta scheduler
+npm start na pasta login
+npm start na pasta crud/client
+npm run devStart na pasta crud/server
+
 # Visualização do usuário
 
 ## Diagrama de classe
