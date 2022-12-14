@@ -9,11 +9,11 @@ Integrantes do grupo:
 
 Para rodar o projeto basta:
 
-npm run dev na pasta raiz
-npm start na pasta scheduler
-npm start na pasta login
-npm start na pasta crud/client
-npm run devStart na pasta crud/server
+- npm run dev na pasta raiz
+- npm start na pasta scheduler
+- npm start na pasta login
+- npm start na pasta crud/client
+- npm run devStart na pasta crud/server
 
 # Visualização do usuário
 
