@@ -28,14 +28,17 @@ const Photos = () => {
                 </Section>
                 <Section>
                     <PhotosGridItem id="radiologia" title="Radiologia" thumbnail={thumbRadiologia}>
+                        Salas de radiologia amplas.
                     </PhotosGridItem>
                 </Section>
                 <Section>
                     <PhotosGridItem id="sala-atendimento" title="Sala de Atendimento" thumbnail={thumbAtendimento}>
+                        Atendimento ergonômico.
                     </PhotosGridItem>
                 </Section>
                 <Section>
                     <PhotosGridItem id="sala-cirurgia" title="Sala de Cirúrgia" thumbnail={thumbCirurgia}>
+                        Médicos e salas capacitadas para atendimentos diversos.
                     </PhotosGridItem>
                 </Section>
             </SimpleGrid>
