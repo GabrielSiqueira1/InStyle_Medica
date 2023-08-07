@@ -10,12 +10,12 @@ import thumbCirurgia from '../public/images/photos/sala-cirurgia.jpg'
 
 const Photos = () => {
     return (
-        <Container>
+        <Container pt={10}>
             <Heading as="h3" fontSize={20} mb={4}>
                 Fotos
             </Heading>
 
-            <SimpleGrid columns={[1,1,1]} gap={6}>
+            <SimpleGrid columns={[1, 1, 1]} gap={6}>
                 <Section>
                     <PhotosGridItem id="recepcao" title="Atendimento" thumbnail={thumbPhotos}>
                         Recepção da InStyle Médica na filial de São Paulo.
@@ -39,7 +39,7 @@ const Photos = () => {
                     </PhotosGridItem>
                 </Section>
             </SimpleGrid>
-            
+
         </Container>
     )
 }

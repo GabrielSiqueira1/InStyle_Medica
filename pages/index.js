@@ -4,7 +4,6 @@ import {
   Heading,
   Link,
   Button,
-  chakra,
   SimpleGrid
 } from '@chakra-ui/react'
 import Section from '../components/section'
@@ -12,14 +11,8 @@ import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { AboutSection, AboutYear } from '../components/about'
-import Image from 'next/image'
 import { PhotosGridItem } from '../components/grid-item'
 import thumbHomePage from '../public/images/contents/home-page.jpg'
-
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop =>
-    ['width', 'height', 'src', 'alt', 'max-width', 'max-height'].includes(prop)
-})
 
 const Page = () => {
   return (

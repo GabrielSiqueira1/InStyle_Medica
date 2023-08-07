@@ -19,23 +19,24 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const  MedicaLogo = `/images/medica.png`
+    const MedicaLogo = `/images/medica.png`
 
     return (
         <Link legacyBehavior href="/" scroll={false}>
             <div>
-            <a>
-                <LogoBox>
-                    <Image src = {MedicaLogo} width={20} height={20} alt="logo" />
-                    <Text
-                        color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                        fontFamily='M PLUS Rounded 1c'
-                        fontWeight="bold"
-                        ml={3}>
-                        InStyle Médica
-                    </Text>
-                </LogoBox>
-            </a>
+                <a>
+                    <LogoBox>
+                        <Image src={MedicaLogo} width={20} height={20} alt="logo" />
+                        <Text
+                            cursor={'pointer'}
+                            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+                            fontFamily='M PLUS Rounded 1c'
+                            fontWeight="bold"
+                            ml={3}>
+                            InStyle Médica
+                        </Text>
+                    </LogoBox>
+                </a>
             </div>
         </Link>
     )

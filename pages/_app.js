@@ -8,9 +8,9 @@ const Website = ({ Component, pageProps, router }) => {
     return (
         <ChakraProvider theme={theme}>
             <Fonts />
-            <Layout router = {router}>
-                <AnimatePresence exitBeforeEnter initial={false}>
-                    <Component {...pageProps} key = {router.route} />
+            <Layout router={router}>
+                <AnimatePresence mode="wait" initial={false}>
+                    <Component {...pageProps} key={router.route} />
                 </AnimatePresence>
             </Layout>
         </ChakraProvider>
