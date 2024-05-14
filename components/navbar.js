@@ -11,7 +11,7 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
@@ -25,7 +25,10 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
         bg={active ? 'grassTeal' : undefined}
         target={target}
         borderRadius={5}
-        _hover={{ backgroundColor: useColorModeValue('white', 'gray'), transition: '0.3s' }}
+        _hover={{
+          backgroundColor: useColorModeValue('white', 'gray'),
+          transition: '0.3s'
+        }}
         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
         {...props}
       >
@@ -69,7 +72,7 @@ const NavBar = props => {
             width={{ base: 'full', md: 'auto' }}
             alignItems="center"
             flexGrow={1}
-            mt={2}
+            mt={1}
           >
             <LinkItem href="/photos" path={path}>
               Fotos
@@ -115,8 +118,8 @@ const NavBar = props => {
             </Menu>
           </Box>
         </Box>
-      </Container >
-    </Box >
+      </Container>
+    </Box>
   )
 }
 
