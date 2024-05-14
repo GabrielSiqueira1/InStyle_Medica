@@ -12,7 +12,7 @@ const Main = ({ children }) => {
 
       <NavBar></NavBar>
 
-      <Container p={14} maxW="container.md">
+      <Container p={14} maxW="container.xl">
         {children}
       </Container>
     </Box>

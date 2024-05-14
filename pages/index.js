@@ -8,7 +8,7 @@ import thumbHomePage from '../public/images/contents/home-page.jpg'
 
 const Page = () => {
   return (
-    <Container maxW="container.md" pt="10">
+    <Container maxW="550px" pt="10">
       <PhotosGridItem id="" title="" thumbnail={thumbHomePage}></PhotosGridItem>
 
       <Box borderRadius="lg" bg="grey" p={3} mb={6} align="center">

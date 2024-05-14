@@ -78,13 +78,7 @@ const NavBar = props => {
               Fotos
             </LinkItem>
             <LinkItem href="/address" path={path}>
-              Novo endereço
-            </LinkItem>
-            <LinkItem href="http://localhost:3001" path={path}>
-              Agendamento
-            </LinkItem>
-            <LinkItem href="http://localhost:3002" path={path}>
-              Login
+              Cadastre seu endereço
             </LinkItem>
           </Stack>
         </Box>
@@ -106,13 +100,7 @@ const NavBar = props => {
                   Fotos
                 </MenuItem>
                 <MenuItem href="/address" passhref as={LinkItem}>
-                  Novo endereço
-                </MenuItem>
-                <MenuItem href="/scheduling" passhref as={LinkItem}>
-                  Agendamento
-                </MenuItem>
-                <MenuItem href="/login" passhref as={LinkItem}>
-                  Login
+                  Cadastre seu endereço
                 </MenuItem>
               </MenuList>
             </Menu>
